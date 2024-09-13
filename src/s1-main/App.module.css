@@ -1,11 +1,57 @@
 .App {
-    --header_height: 60px;
+	--header_height: 60px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1140px;
+	width: 100%;
+}
+
+.hw1 {
+	min-height: 372px;
+
+	min-width: 1280px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .hw {
+	display: flex;
+	flex-direction: column;
 
+	justify-content: space-between;
+}
+
+.hwMessages {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-evenly;
+	min-height: 335px;
 }
 
 .hwTitle {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	color: #000;
+}
 
+.hwTitle::before {
+	content: '';
+	position: absolute;
+	border: 1px solid #d9d9d9;
+
+	bottom: -20px;
+	left: 0;
+
+	width: 100%;
 }
