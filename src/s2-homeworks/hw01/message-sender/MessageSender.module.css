@@ -17,6 +17,7 @@
 
 .textarea {
 	padding: 12px 24px;
+	resize: none;
 
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
