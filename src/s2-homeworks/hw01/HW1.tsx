@@ -34,7 +34,7 @@ export const message0: MessageType = {
 		name: 'Ivan', // можно менять
 	},
 	message: {
-		text: 'Hello, how are you, what did you do yesterday?', // можно менять
+		text: 'Hello, she didn’t do anything and rested all day, how are you?', // можно менять
 		time: '22:00', // можно менять
 	},
 }
@@ -45,14 +45,14 @@ export const friendMessage0: MessageType = {
 		name: 'Stas', // можно менять
 	},
 	message: {
-		text: 'Hello, she didn’t do anything and rested all day, how are you?', // можно менять
+		text: 'Hello, how are you, what did you do yesterday?', // можно менять
 		time: '22:00', // можно менять
 	},
 }
 
 const HW1 = () => {
 	return (
-		<div id={'hw1'} className={s2.hw1}>
+		<div id={'hw1'}>
 			<div className={s2.container}>
 				<div className={s2.hwTitle}>Homework #1</div>
 				<div className={s2.hw}>
