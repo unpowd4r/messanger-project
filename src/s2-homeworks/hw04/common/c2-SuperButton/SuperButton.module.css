@@ -2,15 +2,24 @@
 }
 
 .disabled {
+	opacity: 0.5; /* Disabled style */
+	cursor: not-allowed;
 }
 
 .secondary {
+	background-color: #007bff;
 }
 
 .default {
+	background-color: #f0f0f0;
 }
 
 .red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
 }
 
 .default:hover {
@@ -21,7 +30,6 @@
 
 .secondary:hover {
 }
-
 
 .default:active {
 }
