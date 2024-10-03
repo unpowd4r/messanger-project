@@ -1,5 +1,68 @@
 .buttonsContainer {
+	display: flex;
+	align-items: center;
+	gap: 25px;
 }
 
 .editableSpanContainer {
+}
+
+.button {
+	color: #0066cc;
+	font-size: 20px;
+	font-weight: 700;
+
+	background-color: #fff;
+
+	height: 45px;
+	width: 155px;
+
+	border: none;
+	border: 2px solid #0066cc;
+
+	transition: 0.2s ease;
+}
+
+.button:active {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+
+	background-color: #0066cc;
+
+	height: 45px;
+	width: 155px;
+
+	border: none;
+	border: 2px solid #0066cc;
+}
+
+.button:hover {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+
+	background-color: #0066cc;
+
+	height: 45px;
+	width: 155px;
+
+	border: none;
+	border: 2px solid #0066cc;
+}
+
+.containSection {
+	margin-top: 70px;
+}
+
+span {
+	font-size: 25px;
+	font-weight: 700;
+	color: #0066cc;
+}
+
+input {
+	font-size: 25px;
+	width: 150px;
+	height: 30px;
 }
