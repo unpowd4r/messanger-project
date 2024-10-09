@@ -1,2 +1,21 @@
 .container {
+	position: relative;
+
+	margin: 0 auto;
+
+	max-width: 1140px;
+	width: 100%;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.select {
+	display: flex;
+}
+
+.radio {
+	display: flex;
+	flex-direction: column;
 }
