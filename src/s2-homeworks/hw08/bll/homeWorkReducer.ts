@@ -18,7 +18,8 @@ export const homeWorkReducer = (
 				: state.sort((a, b) => (a.name < b.name ? 1 : -1))
 		}
 		case 'check': {
-			return state.filter(student => student.age > action.payload)
+			const newState = state.filter(student => student.age > action.payload)
+			return newState.sort((a, b) => (a.age > b.age ? 1 : -1))
 		}
 		default:
 			return state
