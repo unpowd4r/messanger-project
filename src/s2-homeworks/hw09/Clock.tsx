@@ -48,12 +48,17 @@ export function Clock() {
 		minute: '2-digit',
 		second: '2-digit',
 	}) || <br />
-	const stringDate = date.toLocaleDateString('en-GB') || <br />
-
-	// день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
+	const stringDate = date
+		.toLocaleDateString('en-GB', {
+			day: '2-digit',
+			month: '2-digit',
+			year: 'numeric',
+		})
+		.replace(/\//g, '.') || <br /> // Заменяем "/" на "."
 	const stringDay = new Intl.DateTimeFormat('en-US', {
 		weekday: 'long',
 	}).format(date) || <br />
+
 	const stringMonth = new Intl.DateTimeFormat('en-US', {
 		month: 'long',
 	}).format(date) || <br />
