@@ -56,21 +56,23 @@ const HW8 = () => {
 						<SuperButton
 							id={'hw8-button-up'}
 							onClick={sortUp}
-							xType={currentSort === 'up' ? '' : 'secondary'}
+							xType={currentSort === 'up' ? 'default' : 'secondary'} // Измените '' на 'default'
 						>
 							Sort up
 						</SuperButton>
+
 						<SuperButton
 							id={'hw8-button-down'}
 							onClick={sortDown}
-							xType={currentSort === 'down' ? '' : 'secondary'}
+							xType={currentSort === 'down' ? 'default' : 'secondary'} // Измените '' на 'default'
 						>
 							Sort down
 						</SuperButton>
+
 						<SuperButton
 							id={'hw8-button-18'}
 							onClick={check18}
-							xType={currentSort === '18' ? '' : 'secondary'}
+							xType={currentSort === '18' ? 'default' : 'secondary'} // Измените '' на 'default'
 						>
 							Check 18+
 						</SuperButton>

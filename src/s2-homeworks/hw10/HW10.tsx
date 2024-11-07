@@ -1,3 +1,4 @@
+import { Container } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
@@ -32,15 +33,17 @@ const HW10 = () => {
 			<div className={s2.hwTitle}>Homework #10</div>
 
 			<div className={s2.hw}>
-				{isLoading ? (
-					<div id={'hw10-loading'}>
-						<Loader />
-					</div>
-				) : (
-					<SuperButton id={'hw10-button-start-loading'} onClick={setLoading}>
-						Set loading...
-					</SuperButton>
-				)}
+				<Container>
+					{isLoading ? (
+						<div id={'hw10-loading'}>
+							<Loader />
+						</div>
+					) : (
+						<SuperButton id={'hw10-button-start-loading'} onClick={setLoading}>
+							Set loading...
+						</SuperButton>
+					)}
+				</Container>
 			</div>
 		</div>
 	)

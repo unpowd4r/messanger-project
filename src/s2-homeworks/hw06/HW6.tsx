@@ -48,13 +48,14 @@ const HW6 = () => {
 						<SuperButton className={s.button} id={'hw6-save'} onClick={save}>
 							Save to ls
 						</SuperButton>
+
 						<SuperButton
 							className={s.button}
 							id={'hw6-restore'}
 							onClick={restore}
 							xType={'secondary'}
 						>
-							Get from ls
+							Restore
 						</SuperButton>
 					</div>
 				</div>
