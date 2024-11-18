@@ -40,30 +40,37 @@ const HW13 = () => {
 				setInfo('код 200 - обычно означает что скорее всего всё ок)')
 			})
 			.catch(e => {
-				const errorResponse = e.response ? e.response.status : 'unknown'
-				switch (errorResponse) {
-					case 500:
-						setCode('Ошибка 500!')
-						setImage(error500)
-						setText('эмитация ошибки на сервере')
-						setInfo(
-							'ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)'
-						)
-						break
-					case 400:
-						setCode('Ошибка 400!')
-						setImage(error400)
-						setText('Ты не отправил success в body вообще!')
-						setInfo(
-							'ошибка 400 - обычно означает что скорее всего фронт отправил что-то не так на бэк!'
-						)
-						break
-
-					default:
-						setImage(errorUnknown)
-						setText('Network Error')
-						setInfo('AxiosError')
-						break
+				if (e.code === 'ERR_NETWORK') {
+					setCode('Network Error!')
+					setImage(errorUnknown)
+					setText('Произошла сетевая ошибка. Проверьте подключение.')
+					setInfo('AxiosError - ошибка сети.')
+				} else if (e.response) {
+					const errorResponse = e.response.status
+					switch (errorResponse) {
+						case 500:
+							setCode('Ошибка 500!')
+							setImage(error500)
+							setText('Эмуляция ошибки на сервере')
+							setInfo('Ошибка 500 - проблема на сервере.')
+							break
+						case 400:
+							setCode('Ошибка 400!')
+							setImage(error400)
+							setText('Ты не отправил success в body!')
+							setInfo('Ошибка 400 - неверные данные, отправленные на сервер.')
+							break
+						default:
+							setCode('Неизвестная ошибка!')
+							setImage(errorUnknown)
+							setText('Неизвестная ошибка сервера')
+							setInfo('Неизвестная ошибка.')
+					}
+				} else {
+					setCode('Ошибка!')
+					setImage(errorUnknown)
+					setText('Неизвестная ошибка')
+					setInfo('Произошла неизвестная ошибка.')
 				}
 			})
 	}
