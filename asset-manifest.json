@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/messanger-project/static/css/main.a4499e12.css",
-    "main.js": "/messanger-project/static/js/main.63ee4f8e.js",
+    "main.js": "/messanger-project/static/js/main.e95ed849.js",
     "static/js/787.66cb4309.chunk.js": "/messanger-project/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/messanger-project/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/messanger-project/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -17,11 +17,11 @@
     "index.html": "/messanger-project/index.html",
     "static/media/burger.svg": "/messanger-project/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
     "main.a4499e12.css.map": "/messanger-project/static/css/main.a4499e12.css.map",
-    "main.63ee4f8e.js.map": "/messanger-project/static/js/main.63ee4f8e.js.map",
+    "main.e95ed849.js.map": "/messanger-project/static/js/main.e95ed849.js.map",
     "787.66cb4309.chunk.js.map": "/messanger-project/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4499e12.css",
-    "static/js/main.63ee4f8e.js"
+    "static/js/main.e95ed849.js"
   ]
 }
