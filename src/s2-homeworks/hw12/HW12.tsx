@@ -1,3 +1,4 @@
+import { Container } from '@mui/material'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import s2 from '../../s1-main/App.module.css'
@@ -36,15 +37,16 @@ const HW12 = () => {
 			<div id={'hw12-text'} className={s2.hwTitle}>
 				Homework #12
 			</div>
-
-			<div className={s2.hw}>
-				<SuperSelect
-					id={'hw12-select-theme'}
-					className={s.select}
-					onChangeOption={change}
-					options={themes}
-				/>
-			</div>
+			<Container>
+				<div className={s2.hw}>
+					<SuperSelect
+						id={'hw12-select-theme'}
+						className={s.select}
+						onChangeOption={change}
+						options={themes}
+					/>
+				</div>
+			</Container>
 		</div>
 	)
 }
