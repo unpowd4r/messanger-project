@@ -1,5 +1,5 @@
 import { Pagination } from '@mui/material'
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import s from './SuperPagination.module.css'
 
@@ -20,27 +20,39 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = ({
 }) => {
 	const lastPage = Math.ceil(totalCount / itemsCountForPage)
 
-	const onChangeCallback = (
-		event: React.ChangeEvent<unknown>,
-		page: number
-	) => {
+	const onChangeCallback = (event: any, page: number) => {
 		onChange(page, itemsCountForPage)
 	}
 
-	const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
-		const newCount = parseInt(event.target.value, 10) // получаем новое значение count
-		onChange(page, newCount) // обновляем данные, передавая новый page и newCount
+	const onChangeSelect = (event: any) => {
+		onChange(page, event)
 	}
 
 	return (
 		<div className={s.pagination}>
 			<Pagination
 				id={id + '-pagination'}
-				sx={
-					{
-						// стили для Pagination // пишет студент
-					}
-				}
+				sx={{
+					button: {
+						borderRadius: '2px',
+						marginRight: '20px',
+						marginLeft: '0px',
+						width: '24px',
+						height: '24px',
+						padding: '4px 8px',
+						fontSize: '14px',
+						fontWeight: 400,
+						backgroundColor: 'transparent',
+						'&:hover': {
+							backgroundColor: '#0066CC',
+							color: '#fff',
+						},
+						'&.Mui-selected': {
+							backgroundColor: '#0066CC',
+							color: '#fff',
+						},
+					},
+				}}
 				page={page}
 				count={lastPage}
 				onChange={onChangeCallback}
